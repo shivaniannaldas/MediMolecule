@@ -267,3 +267,177 @@ const ModalLayout = () => {
 };
 
 export default ModalLayout;
+
+
+
+
+
+
+
+/*"use client";
+
+import Breadcrumb from "@/components/ComponentHeader/ComponentHeader";
+import DefaultLayout from "@/components/Layouts/DefaultLayout";
+import React, { useState } from "react";
+
+const ModalLayout = () => {
+  const [inputs, setInputs] = useState({
+    smiles: "",
+    moleculeNumber: "",
+    minSimilarity: 0.3,
+    particles: 30,
+    iterations: 10,
+  });
+  const [molecule, setMolecule] = useState(null);
+  const [isImageVisible, setIsImageVisible] = useState(false);  // To toggle image visibility
+
+  const predefinedMolecules = [
+    {
+      smiles: "CCN(CC)C(=O)[C@@]1(C)Nc2c(ccc3ccccc23)C[C@H]1N(C)C",
+      number: 1,
+      image: "/images/user/mol-1.jpg",
+    },
+    {
+      smiles: "C1=CC=C(C=C1)C=O",
+      number: 2,
+      image: "/images/user/mol-2.jpg",
+    },
+    {
+      smiles: "CC(=O)OC1=CC=CC=C1C(=O)O",
+      number: 3,
+      image: "/images/user/mol-3.jpg",
+    },
+    {
+      smiles: "C1=CC=CN=C1",
+      number: 4,
+      image: "/images/user/mol-4.jpg",
+    },
+  ];
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setInputs((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleGenerateMolecule = () => {
+    const foundMolecule = predefinedMolecules.find(
+      (mol) =>
+        mol.smiles === inputs.smiles ||
+        mol.number.toString() === inputs.moleculeNumber
+    );
+    setMolecule(foundMolecule || null);
+  };
+
+  const handleViewImage = () => {
+    setIsImageVisible(!isImageVisible);  // Toggle the image visibility
+  };
+
+  return (
+    <DefaultLayout>
+      <Breadcrumb pageName="Generate Molecules" />
+
+      <div className="grid grid-cols-1 gap-9 sm:grid-cols-3">
+        <div className="flex flex-col gap-9 sm:col-span-2">
+          <div className="rounded-lg border border-stroke bg-white shadow-default dark:border-[#121212] dark:bg-[#181818]">
+            <div className="border-b border-stroke px-6.5 py-4 dark:border-strokedark">
+              <h3 className="font-medium text-black dark:text-white">
+                Dynamic Molecule Generator
+              </h3>
+            </div>
+
+            <div className="p-6.5">
+              <div className="flex flex-col gap-4">
+                <input
+                  type="text"
+                  name="smiles"
+                  value={inputs.smiles}
+                  onChange={handleInputChange}
+                  placeholder="Enter SMILES String"
+                  className="w-full rounded border border-stroke p-2"
+                />
+                <input
+                  type="number"
+                  name="moleculeNumber"
+                  value={inputs.moleculeNumber}
+                  onChange={handleInputChange}
+                  placeholder="Enter Molecule Number"
+                  className="w-full rounded border border-stroke p-2"
+                />
+                <input
+                  type="number"
+                  name="minSimilarity"
+                  value={inputs.minSimilarity}
+                  onChange={handleInputChange}
+                  placeholder="Enter Minimum Similarity"
+                  className="w-full rounded border border-stroke p-2"
+                />
+                <input
+                  type="number"
+                  name="particles"
+                  value={inputs.particles}
+                  onChange={handleInputChange}
+                  placeholder="Enter Particles"
+                  className="w-full rounded border border-stroke p-2"
+                />
+                <input
+                  type="number"
+                  name="iterations"
+                  value={inputs.iterations}
+                  onChange={handleInputChange}
+                  placeholder="Enter Iterations"
+                  className="w-full rounded border border-stroke p-2"
+                />
+                <button
+                  onClick={handleGenerateMolecule}
+                  className="flex w-full justify-center rounded-lg bg-primary p-3 font-medium text-gray hover:bg-opacity-90"
+                >
+                  Generate Molecule
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-9">
+          <div className="rounded-lg border border-stroke bg-white p-3 shadow-default dark:border-[#121212] dark:bg-[#181818]">
+            <h3 className="font-medium text-black dark:text-white">
+              Molecule Details
+            </h3>
+            {molecule ? (
+              <div className="mt-4">
+                <p className="mt-2 text-sm text-black dark:text-white">
+                  <strong>SMILES:</strong> {molecule.smiles}
+                </p>
+                <p className="mt-2 text-sm text-black dark:text-white">
+                  <strong>Particles:</strong> {inputs.particles}
+                </p>
+                <button
+                  onClick={handleViewImage}
+                  className="mt-2 text-blue-500 cursor-pointer"
+                >
+                  View Molecule
+                </button>
+                {isImageVisible && (
+                  <div className="mt-4">
+                    <img
+                      src={molecule.image}
+                      alt={molecule.number}
+                      className="w-full h-auto"
+                    />
+                    
+                  </div>
+                )}
+              </div>
+            ) : (
+              <p className="mt-4 text-sm text-black dark:text-white">
+                No molecule found. Please provide valid inputs.
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+    </DefaultLayout>
+  );
+};
+
+export default ModalLayout;*/

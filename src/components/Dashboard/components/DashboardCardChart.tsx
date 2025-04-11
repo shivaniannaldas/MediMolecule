@@ -23,14 +23,14 @@ const ChartThree: React.FC = () => {
           <div className="flex items-start gap-2.5">
             <img
               className="h-8 w-8 rounded-full"
-              src='/images/user/user-01.png'
+              src='/images/user/user-02.png'
               alt="Jese image"
             />
 
             <div className="leading-1.5 border-gray-200 dark:bg-gray-700 flex w-full max-w-[320px] flex-col rounded-e-xl rounded-es-xl bg-[#f3f4f6] p-4">
               <div className="flex items-center space-x-2 rtl:space-x-reverse">
                 <span className="text-gray-900 text-sm font-semibold dark:text-white">
-                  {"John"}
+                  {"Shivani"}
                 </span>
                 <span className="text-gray-500 dark:text-gray-400 text-sm font-normal">
                   11:46

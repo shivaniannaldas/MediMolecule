@@ -15,9 +15,9 @@ import { getUserByEmail } from "@/lib/actions/user.action";
     
     const { data: session } = useSession();
     const [user, setUser] = useState({
-      firstName: "John",
-      lastName: "Doe",
-      photo: "/images/user/user-01.png",
+      firstName: "Shivani",
+      lastName: "Annaldas",
+      photo: "/images/user/user-02.png",
       jobTitle: "Drug Researcher",
       userBio: "",
     });
@@ -27,9 +27,9 @@ import { getUserByEmail } from "@/lib/actions/user.action";
         if (session?.user?.email) {
           const fetchedUser = await getUserByEmail(session.user.email);
           setUser({
-            firstName: fetchedUser?.firstName || "John",
-            lastName: fetchedUser?.lastName || "Doe",
-            photo: fetchedUser?.photo || "/images/user/user-01.png",
+            firstName: fetchedUser?.firstName || "Shivani",
+            lastName: fetchedUser?.lastName || "Annaldas",
+            photo: fetchedUser?.photo || "/images/user/user-02.png",
             jobTitle: fetchedUser?.jobTitle || "Researcher",
             userBio: fetchedUser?.userBio || "",
           });

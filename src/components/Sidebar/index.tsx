@@ -88,7 +88,7 @@ const Sidebar = ({sidebarOpen, setSidebarOpen}: SidebarProps) => {
                             priority
                             />
                         </div>
-                        <p className="text-xl font-semibold text-white">Pharma Quest</p>
+                        <p className="text-xl font-semibold text-white">MediMolecule</p>
                     </div>
                 </Link>
 

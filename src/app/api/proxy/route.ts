@@ -11,6 +11,8 @@ export async function POST(req: NextRequest) {
             bodyLength: JSON.stringify(body).length,
             hasApiKey: !!process.env.NVIDIA_API_KEY
         });
+        console.log("API Key being used:", process.env.NVIDIA_API_KEY);
+
 
         const response = await fetch(invokeUrl, {
             method: "POST",

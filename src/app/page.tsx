@@ -5,8 +5,8 @@ import { Metadata } from "next"; //will help in SEO
 
 export const metadata: Metadata = {
   title:
-    "Welcome to Pharma-Quest",
-  description: "This is Next.js Home for PharmaQuest Dashboard Template",
+    "Welcome to MediMolecule",
+  description: "This is Next.js Home for MediMolecule Dashboard Template",
 };
 
 export default function Home() {
