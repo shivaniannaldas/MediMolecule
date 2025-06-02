@@ -1,53 +1,96 @@
-# MediMolecule: An AI-Powered Platform for Accelerating Drug Discovery Through Molecule Generation and Real-Time Collaboration
+## 📋 <a name="table">Table of Contents</a>
+
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🧬 [Protein Data Processing](#protein-data)
+6. 🚀 [More](#more)
+
+## <a name="introduction">🤖 Introduction</a>
+
+**Pharma Quest** is a drug discovery and protein-binding prediction tool built with the latest in machine learning and natural language processing (NLP) technology. Powered by NVIDIA NIM and protein structure prediction models, this project enables users to simulate molecular interactions and predict protein structures.
+
+The platform is designed to help researchers accelerate drug discovery by leveraging cutting-edge AI models for protein folding, docking, and molecular dynamics.
 
 
-MediMolecule is an AI-driven platform designed to accelerate the drug discovery process by providing powerful tools for molecule search, generation, and data analysis. It reduces the time, cost, and resources required compared to traditional methods, making drug discovery faster, more accessible, and cost-effective.
 
-## Features
+## <a name="tech-stack">⚙️ Tech Stack</a>
 
-- **AI-Powered Molecule Search & Generation**
-  - Advanced AI search engine to quickly filter and find molecules in large datasets.
-  - Molecule generation using Nvidia's MolMIM AI model, allowing the creation of novel molecules with desired properties.
-  
-- **Real-Time Collaboration**
-  - Instant messaging and communication using **Ably**, enabling seamless real-time collaboration between researchers globally.
-  
-- **Data Integration & Visualization**
-  - Integration with **PubChem** for comprehensive chemical data.
-  - Interactive data visualizations for molecular properties and relationships, simplifying data analysis.
+- **Next.js**
+- **TypeScript**
+- **NVIDIA** (for protein structure prediction)
+- **Tailwind CSS**
+- **React Chart.js** (for visualizing protein data)
 
-- **Comprehensive Research Tools**
-  - Access to a vast molecule database and external resources for better decision-making in drug discovery.
-  - **RDKit** toolkit for cheminformatics and molecular modeling.
+## <a name="features">🔋 Features</a>
 
-## Target Users
-- Researchers
-- Pharmaceutical Companies
-- Academic Institutions
+👉 **Protein Structure Prediction**: Predicts 2D protein structures using NVIDIA models.
 
-## Functional Requirements
-- AI-powered molecule search and generation.
-- Real-time communication and collaboration tools.
-- Data visualization for molecular properties and relationships.
-- Integration with PubChem for chemical data.
+👉 **Collaborative Research**: Researches can create groups and colloborate with other research online
 
-## Non-Functional Requirements
-- Scalable for large datasets.
-- User-friendly interface.
-- Security for sensitive research data.
+👉 **Responsive Design**: Ensures seamless experience across all devices, from desktops to mobile.
 
-## Tech Stack
+## <a name="quick-start">🤸 Quick Start</a>
 
-- **Frontend**: Next.js (for a seamless user experience and server-side rendering)
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB (NoSQL database for scalable data storage)
-- **Messaging**: Ably (Real-time messaging platform)
-- **AI Model**: Nvidia MolMIM (For generating molecules based on desired properties)
-- **Cheminformatics**: RDKit (Open-source toolkit for molecular modeling)
-- **Data Integration**: PubChem (Public chemical database)
+Follow these steps to set up the project locally on your machine.
 
-## Hardware Requirements
-- **Laptop/Desktop**: Modern laptop/desktop with a minimum of 8GB RAM and multi-core processor.
-- **Internet**: Stable, high-speed internet connection for real-time communication and access to external resources.
+### **Prerequisites**
 
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+### **Cloning the Repository**
+
+```bash
+git clone https://github.com/Arjunhg/pharma-quest.git
+cd pharma-quest
+```
+
+### **Installation**
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+### **Set Up Environment Variables**
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+NEXT_PUBLIC_NVIDIA_API_KEY=your-nvidia-api-key
+
+ABLY_API_KEY='your-ably-api-key'
+
+MONGODB_URL='your-mongodb-url'
+
+NEXT_PUBLIC_API_BASE_URL=http://localhost:3000
+
+RESEND_KEY='your-resend-api-key'
+```
+
+### **Running the Project**
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+
+## <a name="protein-data">🧬 Protein Data Processing</a>
+
+This section covers the protein data processing pipeline, including loading protein structure files (e.g., PDB format), performing molecular docking simulations, and visualizing the results.
+
+### **Protein Structure Input**
+
+Users can upload PDB files for protein structures, which will then be processed by NVIDIA NeMo's protein-folding models.
+
+### **Docking Simulation**
+
+Using molecular docking algorithms, the system predicts how small molecules (such as drug candidates) bind to protein targets.
 
